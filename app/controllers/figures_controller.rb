@@ -13,7 +13,7 @@ class FiguresController < ApplicationController
     @figure = Figure.create(params[:figure])
     if !params[:title][:name].empty?
       @title = Title.create(params[:title]) #passing in hash as argument
-      @figure.titles << @title #can't use .update(title.id) b/c figure doesn't have title id field?
+      @figure.titles << @title 
     end
     if !params[:landmark][:name].empty?
       @landmark = Landmark.create(params[:landmark]) #passing in hash as argument
